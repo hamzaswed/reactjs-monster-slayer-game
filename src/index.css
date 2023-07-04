@@ -1,7 +1,8 @@
 :root {
   --color-primary: #880017;
-  --color-primary-dark: #360009;
   --color-primary-light: #e7ccd1;
+  --color-primary-light-1: #a03345;
+  --color-primary-dark: #360009;
 
   --color-gray-0: #f8f9fa;
   --color-gray-1: #f1f3f5;
@@ -13,6 +14,8 @@
   --color-gray-7: #495057;
   --color-gray-8: #343a40;
   --color-gray-9: #212529;
+
+  --box-width: 50rem;
 }
 
 *,
@@ -37,11 +40,45 @@ body {
   min-height: 100vh;
 }
 
+.btn {
+  background-color: var(--color-primary);
+  outline: none;
+  border: none;
+  font: transparent;
+  color: var(--color-gray-0);
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  padding: 2rem 4rem;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn:hover {
+  background-color: var(--color-primary-light-1);
+}
+
+.btn:focus {
+  background-color: var(--color-primary-light-1);
+  outline: 2px solid var(--color-primary-light-1);
+  outline-offset: 4px;
+}
+
+.btn:active {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 1px 4px 0px;
+  transform: translateY(1.5px);
+}
+
 .header {
   background-color: var(--color-primary);
   color: var(--color-gray-0);
   padding-block: 2.4rem;
   text-align: center;
+  margin-bottom: 3.2rem;
 }
 
 .header__title {
@@ -50,10 +87,10 @@ body {
 }
 
 .card {
-  max-width: 50rem;
-  margin: 2rem auto;
+  max-width: var(--box-width);
+  margin: 2.4rem auto;
   border-radius: 5px;
-  padding: 1rem;
+  padding: 1.2rem;
   border: 1px solid var(--color-primary);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
@@ -82,8 +119,40 @@ body {
 .member-health-value {
   display: inline-block;
   height: 100%;
-  width: 80%;
   background-color: var(--color-primary);
+}
+
+.control {
+  max-width: var(--box-width);
+  margin: 3.2rem auto;
+}
+
+.control__healder {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.4rem;
+}
+
+.control__title {
+  font-size: 1.8rem;
+}
+
+.btn-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: stretch;
+  gap: 2.4rem;
+}
+
+.game-result {
+  max-width: var(--box-width);
+  margin: 3.2rem auto;
+  border-radius: 5px;
+  background-color: var(--color-primary-light);
+  padding: 1.6rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 /* 

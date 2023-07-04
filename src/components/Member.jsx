@@ -6,6 +6,8 @@ export default function Member({ title, icon, health }) {
     width: `${health}%`,
   };
 
+  // TODO : chage health bar color whene it become lower and lower
+
   return (
     <>
       <h2 className="member-title">
