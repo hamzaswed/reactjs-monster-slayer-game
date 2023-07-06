@@ -1,0 +1,46 @@
+.header {
+  background-color: var(--color-primary);
+  color: var(--color-gray-0);
+  padding-block: 2.4rem;
+  text-align: center;
+  margin-bottom: 3.2rem;
+
+  &__title {
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+}
+
+.secondary-header {
+  text-align: center;
+  margin-bottom: 2.4rem;
+
+  &__title {
+    font-size: 1.8rem;
+  }
+}
+
+.section-health-cards {
+  margin-bottom: 3.2rem;
+}
+
+.section-game-control {
+  max-width: var(--box-width);
+  margin: 0 auto 3.2rem auto;
+}
+
+.btn-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: stretch;
+  gap: 2.4rem;
+}
+
+.section-game-result {
+  max-width: var(--box-width);
+  margin: 3.2rem auto;
+  border-radius: 5px;
+  background-color: var(--color-primary-light);
+  padding: 1.6rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}

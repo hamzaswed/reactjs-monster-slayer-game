@@ -1,7 +1,9 @@
 import { useState } from "react";
-import Headler from "./components/Header";
-import Member from "./components/Member";
+import { MainHeader } from "./components/Header";
+import HealthCard from "./components/HealthCard";
 import Button from "./components/button";
+import GameControl from "./components/GameControl";
+import GameResult from "./components/GameResult";
 
 function generateRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
@@ -33,43 +35,37 @@ function App() {
 
   return (
     <>
-      <Headler />
+      <MainHeader />
       <main className="main-content">
-        <section className="members-health">
-          <Member title="Monster Health" icon="👾" health={monsetrHealth} />
-          <Member title="Your Health" icon="🦸‍♂️" health={playerHealth} />
+        <section className="section-health-cards">
+          <HealthCard title="Monster Health" icon="👾" health={monsetrHealth} />
+          <HealthCard title="Your Health" icon="🦸‍♂️" health={playerHealth} />
         </section>
         {true && (
-          <section className="game-control">
-            <header className="secondary-header">
-              <h2 className="secondary-header__title">
-                Deal significant damage 💪 and defeat the monster ⚡
-              </h2>
-            </header>
-            <div className="btn-group">
-              <Button icon="🤜" onClick={attackHandler}>
-                Attack
-              </Button>
-              <Button icon="💪" onClick={specialAttackHandler} disabled>
-                Spacial Attack
-              </Button>
-              <Button icon="💉">Heal</Button>
-              <Button icon="🚩">Surrender</Button>
-            </div>
-          </section>
+          <GameControl>
+            <Button primary icon="🤜" onClick={attackHandler}>
+              Attack
+            </Button>
+
+            <Button primary icon="💪" onClick={specialAttackHandler}>
+              Spacial Attack
+            </Button>
+
+            <Button primary icon="💉">
+              Heal
+            </Button>
+
+            <Button primary icon="🚩">
+              Surrender
+            </Button>
+          </GameControl>
         )}
-        {false && (
-          <section className="game-result">
-            <header className="secondary-header secondary-header--game-result">
-              <h2 className="secondary-header__title">⚡ Game Over ⚡</h2>
-            </header>
-            <p className="game-result__message">The Result Is: You 🦸‍♀️ Own </p>
-            <div className="game-result__btn-group">
-              <button className="secodary-btn">
-                Play Again <span>🔄</span>{" "}
-              </button>
-            </div>
-          </section>
+        {true && (
+          <GameResult resultText="The Result Is: You 🦸‍♀️ Own">
+            <Button secondary icon="🔄">
+              Play Again
+            </Button>
+          </GameResult>
         )}
       </main>
     </>

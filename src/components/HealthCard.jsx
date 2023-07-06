@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
-export default function Member({ title, icon, health }) {
+export default function HealthCard({ title, icon, health }) {
   const healthBarBackgroundColor = { backgroundColor: "#880017" };
 
   if (health < 70) {
@@ -19,11 +19,11 @@ export default function Member({ title, icon, health }) {
 
   return (
     <div className="card">
-      <h3 className="member-title">
-        {title} <span className="member-icon">{icon}</span>
+      <h3 className="card__title">
+        {title} <span className="card__icon">{icon}</span>
       </h3>
-      <div className="member-health-bar">
-        <span style={healthValue} className="member-health-value"></span>
+      <div className="card__health-bar">
+        <span style={healthValue} className="card__health-value"></span>
       </div>
     </div>
   );

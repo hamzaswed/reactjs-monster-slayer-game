@@ -1,10 +1,26 @@
 /* eslint-disable react/prop-types */
 
-export default function Button({ children, icon, ...rest }) {
+export default function Button({
+  children,
+  icon,
+  primary,
+  secondary,
+  ...rest
+}) {
+  let classes = "btn";
+
+  if (primary) {
+    classes += " main-btn";
+  }
+
+  if (secondary) {
+    classes += " secodary-btn";
+  }
+
   return (
-    <button className="btn" {...rest}>
+    <button className={classes} {...rest}>
       {children}
-      <span className="btn__icon">{icon}</span>
+      <span>{icon}</span>
     </button>
   );
 }

@@ -1,0 +1,126 @@
+// MAIN BUTTON
+.main-btn {
+  background-color: var(--color-primary);
+  color: var(--color-gray-0);
+  padding: 2rem 4rem;
+  border: none;
+
+  &:hover {
+    background-color: var(--color-primary-light-1);
+  }
+
+  &:focus {
+    background-color: var(--color-primary-light-1);
+  }
+}
+
+// SECONDARY BUTTON
+.secodary-btn {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  padding: 1rem 2rem;
+
+  &:hover {
+    background-color: var(--color-primary-light-2);
+  }
+
+  &:focus {
+    background-color: var(--color-primary-light-2);
+  }
+}
+
+// CARD COMPONENT
+
+.card {
+  max-width: var(--box-width);
+  margin: 2.4rem auto;
+  border-radius: 5px;
+  padding: 1.2rem;
+  border: 1px solid var(--color-primary);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  &__title {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__icon {
+    font-size: 2rem;
+    display: inline-block;
+  }
+
+  &__health-bar {
+    width: 100%;
+    height: 3rem;
+    background-color: var(--color-primary-light);
+  }
+
+  &__health-value {
+    display: inline-block;
+    height: 100%;
+    background-color: var(--color-primary);
+  }
+}
+
+.game-result {
+  &__message {
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 2.4rem;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* 
+
+  01___TYPOGRAPHY SYSTEM
+
+    - Font size (px)
+
+      10 
+      12 
+      14 
+      16 
+      18 
+      20 
+      24 
+      30 
+      36 
+      44 
+      52 
+      62 
+      74 
+      86 
+      98
+
+
+    07___WHITESPACE
+
+    - Spacing systme (px)
+
+      2 
+      4 
+      8 
+      12 
+      16 
+      24 
+      32 
+      48 
+      64 
+      80 
+      96 
+      128
+
+*/
