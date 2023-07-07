@@ -7,7 +7,7 @@ export default function GameResult({ children, resultText }) {
       <SecondaryHeader title="⚡ Game Over ⚡" />
 
       <div className="game-result">
-        <p className="game-result__message">{resultText}</p>
+        <p className="game-result__message">The Result Is: {resultText}</p>
         <footer className="game-result__footer">{children}</footer>
       </div>
     </section>
