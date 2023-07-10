@@ -83,6 +83,39 @@
   }
 }
 
+.battle-log {
+  &__list {
+    text-align: center;
+    list-style: none;
+  }
+
+  &__list-item {
+    font-size: 1.5rem;
+
+    & span:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__list-item:not(:last-child) {
+    margin-bottom: 1.2rem;
+  }
+
+  &__who {
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+
+  &__what {
+    font-style: italic;
+  }
+
+  &__value {
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+}
+
 /* 
 
   01___TYPOGRAPHY SYSTEM
