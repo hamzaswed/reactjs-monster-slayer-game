@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { MainHeader, SecondaryHeader } from "./components/Header";
+import { MainHeader } from "./components/Header";
 import HealthCard from "./components/HealthCard";
 import Button from "./components/button";
 import GameControl from "./components/GameControl";
 import GameResult from "./components/GameResult";
+import BattleLogList from "./components/BattleLogList";
 
 function generateRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
@@ -13,12 +14,6 @@ let turnTime = 0;
 let isPlayerHeald = false;
 let isGameOver = false;
 let gameResultMessage = "";
-
-// const dummy_arr = [
-//   { id: 1, who: "Monster", what: "Attack you", value: 20 },
-//   { id: 2, who: "You", what: "Attack the monster", value: 16 },
-//   { id: 3, who: "You", what: "Attack the monster (spacial)", value: 20 },
-// ];
 
 function App() {
   const [monsetrHealth, setMonsterHealth] = useState(100);
@@ -36,7 +31,7 @@ function App() {
       value: attackValue,
     };
 
-    if (attackValue > 12) {
+    if (attackValue >= 13) {
       newLog.what = "attack the monster (special) 💪🤜";
     }
 
@@ -88,7 +83,7 @@ function App() {
 
   function specialAttackHandler() {
     turnTime++;
-    monsterAttack(10, 25);
+    monsterAttack(13, 25);
     playerAttack();
   }
 
@@ -138,7 +133,7 @@ function App() {
     gameResultMessage = "Monster 👾 Own";
   }
 
-  let isSpecialAttackButtonAvailable = turnTime % 4 !== 0;
+  let isSpecialAttackButtonAvailable = turnTime % 5 !== 0;
 
   return (
     <>
@@ -184,22 +179,8 @@ function App() {
             </Button>
           </GameResult>
         )}
-        <section className="section-battle-log">
-          <SecondaryHeader title="Battle Log ⚔" />
-          <ul className="battle-log__list">
-            {battleLogs.map((battleLog) => {
-              return (
-                <li key={battleLog.id} className="battle-log__list-item">
-                  <span className="battle-log__who">{battleLog.who}</span>
-                  <span className="battle-log__what">{battleLog.what}</span>
-                  <span className="battle-log__value">
-                    Value: {battleLog.value}
-                  </span>
-                </li>
-              );
-            })}
-          </ul>
-        </section>
+
+        <BattleLogList battleLogs={battleLogs} />
       </main>
     </>
   );
