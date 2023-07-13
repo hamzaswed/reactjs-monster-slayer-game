@@ -7,7 +7,7 @@
 
 A game built using HTML, CSS and JavaScript(Reactjs)
 
-<a href="https://hamzaswed.github.io/vanillajs-quote-generator-project"><strong>➥ Live Demo</strong></a>
+<a href="https://reactjs-monster-slayer-game.netlify.app/"><strong>➥ Live Demo</strong></a>
 
 </div>
 
