@@ -15,7 +15,7 @@ A game built using HTML, CSS and JavaScript(Reactjs)
 
 ### Screenshot
 
-![image](https://github.com/hamzaswed/vanillajs-quote-generator-project/assets/81015655/cac955cc-f4a5-4126-83f9-a572c3962777)
+![image](./Vite%20+%20React.png)
 
 ## Author
 
